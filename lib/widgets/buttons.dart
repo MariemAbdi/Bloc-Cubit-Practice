@@ -11,14 +11,19 @@ class Buttons extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        FloatingActionButton(//add increase
-          onPressed: () => cubit.increment(),
+        FloatingActionButton(
+          onPressed: cubit.increment,
           child: const Icon(Icons.plus_one),
         ),
         const SizedBox(height: 10),
-        FloatingActionButton(//add increase
-          onPressed: () => cubit.decrement(),
+        FloatingActionButton(
+          onPressed: cubit.decrement,
           child: const Icon(Icons.exposure_minus_1),
+        ),
+        const SizedBox(height: 10),
+        FloatingActionButton(
+          onPressed: cubit.reset,
+          child: const Icon(Icons.refresh),
         ),
       ],
     );

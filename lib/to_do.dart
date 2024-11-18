@@ -16,3 +16,11 @@
 // Optimize performance by ensuring Cubits do not rebuild unnecessary parts of the widget tree.
 // Familiarize yourself with tools like flutter_bloc's BlocSelector for more selective state listening.
 
+///WHY USE HIERARCHY ?
+///Flexibility: You can now handle different states (e.g., loading, success, error) with separate state classes.
+///Scalability: As your app grows, you can easily add more specific states (e.g., CounterLoading, CounterSuccess, CounterError).
+///Better State Management: It's easier to manage multiple states, such as when a state transitions from loading to loaded or when an error happens.
+///_____________________________________________________________________
+/// Base class for Counter state
+/// The abstract base class represents the general idea of a state.
+/// All states will inherit from this class.

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../cubit/counter_cubit_state.dart';
-import '../models/counter_model.dart';
+import '../cubit/counter_state.dart';
 
 class CounterWidget extends StatelessWidget {
   const CounterWidget({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class CounterWidget extends StatelessWidget {
     ///CAN USE THIS AND REMOVE THE BUILDER
     ///final cubit = context.watch<CounterCubit>().state;
     ///cubit.message | cubit.counter
-    return BlocBuilder<CounterCubit, Counter>(
+    return BlocBuilder<CounterCubit, CounterState>(
       //This ensures that the widget rebuilds only when the counter value changes,
       //ignoring changes to other state properties.
       buildWhen: (previous, current) => previous != current,
@@ -21,9 +21,9 @@ class CounterWidget extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(state.message, style: const TextStyle(fontSize: 18, color: Colors.red), textAlign: TextAlign.center),
-              const SizedBox(height: 20),
-              Text("${state.counter}", style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+              Text("${state.counter}", style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
+              if(state.message.isNotEmpty)
+                Text(state.message, style: const TextStyle(fontSize: 18, color: Colors.red), textAlign: TextAlign.center),
             ],
           ),
         );
