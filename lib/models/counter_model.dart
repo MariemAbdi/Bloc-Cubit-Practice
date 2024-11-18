@@ -1,8 +1,13 @@
-import 'package:state_management_cubit/constants.dart';
+import 'package:equatable/equatable.dart';
 
-class Counter{
+///By implementing Equatable, Flutter will only trigger UI rebuilds when the state
+///properties actually change, preventing unnecessary updates.
+class Counter extends Equatable{
   final int counter;
-  final String text;
+  final String message;
 
-  Counter({this.counter = 0, this.text = Constants.defaultMessage});
+  const Counter(this.counter, this.message);
+
+  @override
+  List<Object?> get props => [counter,message];
 }

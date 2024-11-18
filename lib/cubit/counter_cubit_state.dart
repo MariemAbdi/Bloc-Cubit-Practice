@@ -4,21 +4,21 @@ import 'package:state_management_cubit/constants.dart';
 import 'package:state_management_cubit/models/counter_model.dart';
 
 class CounterCubit extends Cubit<Counter> {
-  CounterCubit() : super(Counter());
+  CounterCubit() : super(const Counter(0, Constants.defaultMessage));
 
   void increment() {
     if(state.counter < 100){
-      emit(Counter(counter: state.counter + 1, text: Constants.defaultMessage));
+      emit(Counter(state.counter + 1, Constants.defaultMessage));
     }else{
-      emit(Counter(counter:state.counter,text: Constants.upperLimitMessage));
+      emit(Counter(state.counter,Constants.upperLimitMessage));
     }
   }
 
   void decrement() {
     if(state.counter > 0){
-      emit(Counter(counter:state.counter - 1,  text: Constants.defaultMessage));
+      emit(Counter(state.counter - 1,  Constants.defaultMessage));
     }else{
-      emit(Counter(counter:state.counter, text: Constants.lowerLimitMessage));
+      emit(Counter(state.counter, Constants.lowerLimitMessage));
     }
   }
 
