@@ -10,6 +10,7 @@ class CounterState extends Equatable {
   final String message;
 
   const CounterState({this.counter = 0, this.message = Constants.defaultMessage});
+
   @override
-  List<Object?> get props => [counter, message];
+  List<Object> get props => [counter, message];
 }

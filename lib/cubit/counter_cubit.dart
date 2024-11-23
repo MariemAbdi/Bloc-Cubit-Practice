@@ -28,7 +28,7 @@ class CounterCubit extends Cubit<CounterState> {
   @override
   void onChange(Change<CounterState> change) {
     super.onChange(change);
-    debugPrint("Counter changed from ${change.currentState.props[0]} to ${change.nextState.props[0]}");
+    debugPrint("Counter changed from ${change.currentState} to ${change.nextState}");
   }
 
   @override
