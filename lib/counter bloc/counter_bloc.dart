@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:logger/logger.dart';
-import 'package:state_management_cubit/bloc/counter_state.dart';
-import 'package:state_management_cubit/constants.dart';
+import 'package:state_management_cubit/config/constants.dart';
+
+import 'counter_state.dart';
 
 ///using part + part of instead of import it will be considered a part of this class
 ///and we don't need to call the event class on its own when we need to use a method

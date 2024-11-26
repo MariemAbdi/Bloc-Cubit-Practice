@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:logger/logger.dart';
-import 'package:state_management_cubit/constants.dart';
-import 'package:state_management_cubit/cubit/counter_state.dart';
+import 'package:state_management_cubit/config/constants.dart';
+
+import 'counter_state.dart';
 
 class CounterCubit extends Cubit<CounterState> {
   CounterCubit() : super(const CounterState());

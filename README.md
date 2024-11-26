@@ -17,10 +17,10 @@ This Flutter project is used for state management learning.
 ## Features
 
 - Bloc
-
 - Cubit
-
 - Freezed
+- json_serializable
+- Logger
 
 ## Installation
 
