@@ -40,11 +40,7 @@ git clone https://github.com/MariemAbdi/Bloc-Cubit-Practice.git
 
 cd Bloc-Cubit-Practice
 
-2. [Configuration Step 1: Describe how to configure the project, such as setting up environment variables, creating configuration files, etc.]
-
-3. [Configuration Step 2: If there are additional configuration steps, outline them here.]
-
-4. Install the required dependencies using:
+2. Install the required dependencies using:
 
 flutter pub get
 
