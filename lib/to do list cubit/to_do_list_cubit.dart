@@ -20,6 +20,15 @@ class ToDoListCubit extends Cubit<List<ToDo>> {
     emit(updatedList);
   }
 
+  deleteAll(){
+    emit([]);
+  }
+
+  markAllAsCompleted(){
+    List<ToDo> updatedList = state.map((todo) => todo.copyWith(isCompleted: true)).toList();
+    emit(updatedList);
+  }
+
 
   @override
   void onChange(Change<List<ToDo>> change) {

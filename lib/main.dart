@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:state_management_cubit/config/styling.dart';
-import 'package:state_management_cubit/to%20do%20list/to_do_list_cubit.dart';
+import 'package:state_management_cubit/to%20do%20list%20bloc/to_do_list_bloc.dart';
+import 'package:state_management_cubit/to%20do%20list%20cubit/to_do_list_cubit.dart';
 import 'package:state_management_cubit/views/home_page.dart';
 
 import 'counter bloc/counter_bloc.dart';
@@ -19,6 +20,9 @@ void main() {
         ),
         BlocProvider(
             create: (context) => ToDoListCubit()
+        ),
+        BlocProvider(
+            create: (context) => ToDoListBloc()
         ),
       ],
     child: const MyApp(),

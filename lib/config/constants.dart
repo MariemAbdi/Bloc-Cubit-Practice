@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:state_management_cubit/models/home_button.dart';
-import 'package:state_management_cubit/to%20do%20list/to_do_list_view.dart';
+import 'package:state_management_cubit/to%20do%20list%20bloc/to_do_list_view.dart';
 
 import '../counter bloc/counter_view.dart';
 import '../counter cubit/counter_view.dart';
+import '../to do list cubit/to_do_list_view.dart';
 
 
 class Constants{
@@ -20,8 +20,8 @@ class Constants{
     },
     {
       "To Do List": [
-        HomeButton(title: "Bloc", widget: Container()),
-        HomeButton(title: "Cubit", widget: const ToDoListPage())
+        HomeButton(title: "Bloc", widget: const ToDoListBlocPage()),
+        HomeButton(title: "Cubit", widget: const ToDoListCubitPage())
       ]
     },
   ];
