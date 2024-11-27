@@ -16,9 +16,11 @@ class _EmailFieldState extends State<EmailField> {
       validator: (email) {
         if (email!.isEmpty) {
           return "Email Can't Be Empty.";
-        } else if (!RegExp(r"^[a-zA-Z\d.]+@[a-zA-Z\d]+\.[a-zA-Z]+").hasMatch(email)) {
-          return "Email Format Is Invalid.";
         }
+        ///This will be checked in bloc
+        // else if (!RegExp(r"^[a-zA-Z\d.]+@[a-zA-Z\d]+\.[a-zA-Z]+").hasMatch(email)) {
+        //   return "Email Format Is Invalid.";
+        // }
         return null;
       },
       controller: widget.controller,

@@ -18,9 +18,11 @@ class _PasswordFieldState extends State<PasswordField> {
       validator: (password) {
           if (password!.isEmpty) {
             return "Password Can't Be Empty.";
-          } else if (password.length < 6) {
-            return "Password Should Contain At Least 6 Characters.";
           }
+          ///Will be handled in bloc
+          // else if (password.length < 6) {
+          //   return "Password Should Contain At Least 6 Characters.";
+          // }
         return null;
       },
       controller: widget.controller,
