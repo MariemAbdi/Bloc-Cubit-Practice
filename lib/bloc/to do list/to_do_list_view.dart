@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
-import 'package:state_management_cubit/to%20do%20list%20bloc/to_do_list_event.dart';
+import 'package:state_management_cubit/bloc/to%20do%20list/to_do_list_event.dart';
 
-import '../models/to_do.dart';
+import '../../models/to_do.dart';
 import 'to_do_list_bloc.dart';
 
 class ToDoListBlocPage extends StatelessWidget {

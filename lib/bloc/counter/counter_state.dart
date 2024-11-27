@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import '../config/constants.dart';
+import '../../config/constants.dart';
 
 ///By implementing Equatable, Flutter will only trigger UI rebuilds when the state
 ///properties actually change, preventing unnecessary updates.

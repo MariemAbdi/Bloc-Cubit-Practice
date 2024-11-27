@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:logger/logger.dart';
 import 'package:state_management_cubit/config/constants.dart';
 
 import 'counter_state.dart';
@@ -30,15 +29,5 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
     on<CounterRestarted>((event, emit){
       emit(const CounterState());///state come from the Bloc class
     });
-  }
-  @override
-  void onChange(Change<CounterState> change) {
-    super.onChange(change);
-    Logger().d("Counter changed from ${change.currentState} to ${change.nextState}");
-  }
-  @override
-  void onError(Object error, StackTrace stackTrace) {
-    Logger().e('Error in CounterCubit: $error\n$stackTrace');
-    super.onError(error, stackTrace);
   }
 }

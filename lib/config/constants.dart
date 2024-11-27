@@ -1,9 +1,10 @@
 import 'package:state_management_cubit/models/home_button.dart';
-import 'package:state_management_cubit/to%20do%20list%20bloc/to_do_list_view.dart';
 
-import '../counter bloc/counter_view.dart';
-import '../counter cubit/counter_view.dart';
-import '../to do list cubit/to_do_list_view.dart';
+import '../bloc/auth/auth_view.dart';
+import '../bloc/counter/counter_view.dart';
+import '../bloc/to do list/to_do_list_view.dart';
+import '../cubit/counter/counter_view.dart';
+import '../cubit/to do list/to_do_list_view.dart';
 
 
 class Constants{
@@ -22,6 +23,12 @@ class Constants{
       "To Do List": [
         HomeButton(title: "Bloc", widget: const ToDoListBlocPage()),
         HomeButton(title: "Cubit", widget: const ToDoListCubitPage())
+      ]
+    },
+    {
+      "Auth": [
+        HomeButton(title: "Bloc", widget: const AuthPageBloc()),
+        //HomeButton(title: "Cubit", widget: const ToDoListCubitPage())
       ]
     },
   ];
