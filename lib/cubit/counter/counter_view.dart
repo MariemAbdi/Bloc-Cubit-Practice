@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:state_management_cubit/widgets/custom_floating_button.dart';
 
+import '../../Presentation/widgets/custom_floating_button.dart';
 import 'counter_state.dart';
 import 'counter_cubit.dart';
 

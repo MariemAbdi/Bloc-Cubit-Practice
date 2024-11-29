@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:state_management_cubit/views/auth_home.dart';
-import 'package:state_management_cubit/widgets/email_field.dart';
-import 'package:state_management_cubit/widgets/password_field.dart';
 
-import '../../widgets/gradient_button.dart';
+
+import '../../Presentation/screens/auth_home.dart';
+import '../../Presentation/widgets/email_field.dart';
+import '../../Presentation/widgets/gradient_button.dart';
+import '../../Presentation/widgets/password_field.dart';
 import 'auth_bloc.dart';
 
 class AuthPageBloc extends StatefulWidget {
@@ -46,10 +47,6 @@ class _AuthPageBlocState extends State<AuthPageBloc> {
           emailController.clear();
           passwordController.clear();
           Navigator.push(context, MaterialPageRoute(builder: (context) => const AuthHome()));
-          // Navigator.pushAndRemoveUntil(
-          //     context,
-          //     MaterialPageRoute(builder: (context) => const AuthHome()),
-          //     (route) => false);
         }
       },
       builder: (context, state) {
